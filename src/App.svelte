@@ -1,30 +1,39 @@
 <script lang="ts">
-	export let name: string;
+  import Github from './component/github.svelte';
+import { components } from './service/store';
+  export let name: string;
+
+  let items = [];
+  const unsubscribe = components.subscribe((value) => {
+    items = value;
+  });
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<header class="header">
+  <nav class="topbar">
+    <div class="container space-between">
+      <div class="logo">
+        <span
+          class="iconify"
+          data-icon="mdi:symfony"
+          data-inline="false"
+          width="30" />
+        <span class="mx-1 bold">Symfony Components</span>
+      </div>
+      <Github projectName='sf-components'/>
+    </div>
+  </nav>
+</header>
+<main class="main">
+
 </main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<footer class="footer">
+  <div class="container centered-xy">
+   <div>
+    vikbert
+    <span class="iconify" data-icon="bx:bx-copyright" data-inline="false"></span>
+    2021
+   </div>
+  </div>
+</footer>
