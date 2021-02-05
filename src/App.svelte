@@ -1,6 +1,6 @@
 <script lang="ts">
   import Components from './component/List.svelte';
-  import Github from './component/github.svelte';
+  import Github from './component/Github.svelte';
 </script>
 
 <header class="header">
@@ -33,3 +33,9 @@
     </div>
   </div>
 </footer>
+
+<style>
+  main {
+    padding-top: 2rem;
+  }
+</style>

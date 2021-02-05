@@ -1,4 +1,4 @@
-<div class="row title-container">
+<div class="row title-container hide-mobile">
   <div class="column title">
     <h1>Symfony 5.2</h1>
     <h3>Full List of Components</h3>
@@ -11,7 +11,6 @@
 
 <style>
   .title-container {
-    padding-top: 40px;
     padding-bottom: 10px;
   }
   .title {

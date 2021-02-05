@@ -4,9 +4,14 @@
   import ListHeader from './ListHeader.svelte';
 
   let items = [];
+  let count = 0;
   components.subscribe((value) => {
     items = value;
   });
+
+  $: count = items.length;
+  $: console.log(count);
+
 </script>
 
 <div class="container">
@@ -16,7 +21,7 @@
   <div class="grid-row">
     {#each items as item}
       <div class="grid-item centered-xy">
-        <Component tooltip={item.versions && item.versions.join(', ')} {item} />
+        <Component tooltip={item.desc} {item} />
       </div>
     {/each}
   </div>
