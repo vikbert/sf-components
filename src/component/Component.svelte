@@ -3,13 +3,15 @@
   export let item: Component;
 </script>
 
-<button data-tooltip={tooltip} class="item is-cleared is-rounded">
+<button data-tooltip={tooltip} class="button is-cleared is-rounded">
   {item.name}
 </button>
 
 <style>
   button {
     color:black !important;
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 75%;
   }
 </style>

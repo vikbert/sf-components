@@ -1,49 +1,37 @@
 <script lang="ts">
   import { components } from '../service/store';
   import Component from './Component.svelte';
+  import ListHeader from './ListHeader.svelte';
 
   let items = [];
   components.subscribe((value) => {
     items = value;
   });
-
-  $: console.log(items);
 </script>
 
 <div class="container">
-  <div class="row title-container">
-    <div class="column title">
-      <h1>Symfony 5.2</h1>
-      <h3>Full List of Components</h3>
-    </div>
-    <div class="column title text-right meta">
-      <h2>26x NEW components</h2>
-      <h3>*compared to 2.0</h3>
-    </div>
-  </div>
-  <div class="row">
+  <ListHeader />
+</div>
+<div class="container">
+  <div class="grid-row">
     {#each items as item}
-      <Component tooltip={item.versions.join(', ')} {item} />
+      <div class="grid-item centered-xy">
+        <Component tooltip={item.versions && item.versions.join(', ')} {item} />
+      </div>
     {/each}
   </div>
 </div>
 
 <style>
-  .container {
-    padding-top: 40px;
+  .grid-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  .title-container {
-    padding-bottom: 10px;
-  }
-  .title {
-    letter-spacing: -1px;
-  }
-  h1,
-  h2 {
-    margin-bottom: 1px;
-    font-weight: 900;
-  }
-  .meta {
-    color: rgba(0, 128, 0, 0.63);
+  .grid-item {
+    flex: 1 0 20%; /* NEW */
+    margin: 5px;
+    min-width: 190px;
+    outline: 1px solid #dedede;
   }
 </style>
