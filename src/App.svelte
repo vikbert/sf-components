@@ -1,12 +1,6 @@
 <script lang="ts">
+  import Components from './component/List.svelte';
   import Github from './component/github.svelte';
-import { components } from './service/store';
-  export let name: string;
-
-  let items = [];
-  const unsubscribe = components.subscribe((value) => {
-    items = value;
-  });
 </script>
 
 <header class="header">
@@ -20,20 +14,21 @@ import { components } from './service/store';
           width="30" />
         <span class="mx-1 bold">Symfony Components</span>
       </div>
-      <Github projectName='sf-components'/>
+      <Github projectName="sf-components" />
     </div>
   </nav>
 </header>
-<main class="main">
 
+<main class="main">
+  <Components />
 </main>
 
 <footer class="footer">
   <div class="container centered-xy">
-   <div>
-    vikbert
-    <span class="iconify" data-icon="bx:bx-copyright" data-inline="false"></span>
-    2021
-   </div>
+    <div>
+      vikbert
+      <span class="iconify" data-icon="bx:bx-copyright" data-inline="false" />
+      2021
+    </div>
   </div>
 </footer>
