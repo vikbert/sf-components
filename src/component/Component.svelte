@@ -12,16 +12,7 @@
 </script>
 
 <a href={'https://symfony.com/components/' + item.name}>
-  <button data-tooltip={validTooltip} class="button is-cleared is-rounded">
+  <div class="grid-item centered-xy" data-tooltip={validTooltip}>
     {item.name}
-  </button>
+  </div>
 </a>
-
-<style>
-  button {
-    color: black !important;
-    font-size: 14px;
-    font-weight: 700;
-    opacity: 75%;
-  }
-</style>

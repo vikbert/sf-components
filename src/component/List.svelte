@@ -20,23 +20,31 @@
 <div class="container">
   <div class="grid-row">
     {#each items as item}
-      <div class="grid-item centered-xy">
         <Component tooltip={item.desc} {item} />
-      </div>
     {/each}
   </div>
 </div>
 
+<svelte:head>
 <style>
   .grid-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
   .grid-item {
-    flex: 1 0 20%; /* NEW */
-    margin: 5px;
-    min-width: 190px;
+    flex: 1 0 20%;
+    padding: 2rem 0;
+    margin: 0.8rem;
+    min-width: 150px;
     outline: 1px solid #dedede;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .grid-item:hover {
+    background-color: #7b2083;
+    color: white;
   }
 </style>
+</svelte:head>
