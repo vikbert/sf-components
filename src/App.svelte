@@ -11,7 +11,8 @@
           class="iconify"
           data-icon="mdi:symfony"
           data-inline="false"
-          width="30" />
+          width="30"
+        />
         <span class="mx-1 bold">Symfony Components</span>
       </div>
       <Github projectName="sf-components" />
