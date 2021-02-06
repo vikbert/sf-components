@@ -13,3 +13,8 @@
     />
   </a>
 </div>
+<style>
+  a {
+    line-height: 1.5rem;
+  }
+</style>
