@@ -28,7 +28,7 @@
     <div class="input-wrapper">
       <input
         type="text"
-        placeholder="search"
+        placeholder="search by name and description"
         bind:value={search}
         on:keyup={submitSearch}
       />

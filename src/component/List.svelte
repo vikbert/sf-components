@@ -1,14 +1,14 @@
 <script lang="ts">
   import ListItem from './ListItem.svelte';
-  import {components, searchKey, filterTag} from '../service/store';
+  import { components, searchKey, filterTag } from '../service/store';
   import ListFilter from './ListFilter.svelte';
   import ListHeader from './ListHeader.svelte';
 
   let items: any[] = [],
-      filteredItems: any[],
-      count: number,
-      tag: string,
-      search: string;
+    filteredItems: any[],
+    count: number,
+    tag: string,
+    search: string;
 
   components.subscribe((value) => {
     items = value;
@@ -30,8 +30,12 @@
     }
 
     if (search && search.length !== 0) {
+      const searchLowerCase = search.toLowerCase();
       filteredItems = items.filter((item) => {
-        return item.name.toLowerCase().includes(search.toLowerCase());
+        return (
+          item.name.toLowerCase().includes(searchLowerCase) ||
+          item.desc.toLowerCase().includes(searchLowerCase)
+        );
       });
     }
   }
