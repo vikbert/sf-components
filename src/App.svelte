@@ -1,28 +1,26 @@
 <script lang="ts">
   import Header from './component/Header.svelte';
-import Components from './component/List.svelte';
+  import Components from './component/List.svelte';
 </script>
 
 <header class="header">
-  <Header/>
+  <Header />
 </header>
 
 <main class="main">
   <Components />
-</main>
 
-<footer class="footer">
-  <div class="container centered-xy">
-    <div>
-      vikbert
-      <span class="iconify" data-icon="bx:bx-copyright" data-inline="false" />
-      2021
-    </div>
+  <div class="copyright centered-xy">
+    <h5 class="opacity-75">vikbert © 2021</h5>
   </div>
-</footer>
+</main>
 
 <style>
   main {
     padding-top: 2rem;
+    height: 100vh;
+  }
+  .copyright {
+    padding: 5rem 0;
   }
 </style>
