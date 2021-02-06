@@ -66,5 +66,45 @@
       background-color: #7b2083;
       color: white;
     }
+    /**
+    * ----------------------------------------
+    * animation tilt-in-fwd-tr
+    * ----------------------------------------
+    */
+    .tilt-in-fwd-tr {
+      -webkit-animation: tilt-in-fwd-tr 0.6s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: tilt-in-fwd-tr 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    @-webkit-keyframes tilt-in-fwd-tr {
+      0% {
+        -webkit-transform: rotateY(20deg) rotateX(35deg)
+          translate(300px, -300px) skew(-35deg, 10deg);
+        transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px)
+          skew(-35deg, 10deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0)
+          skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes tilt-in-fwd-tr {
+      0% {
+        -webkit-transform: rotateY(20deg) rotateX(35deg)
+          translate(300px, -300px) skew(-35deg, 10deg);
+        transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px)
+          skew(-35deg, 10deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0)
+          skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+      }
+    }
   </style>
 </svelte:head>

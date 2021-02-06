@@ -12,7 +12,7 @@
 </script>
 
 <a href={'https://symfony.com/components/' + item.name} target="_blank">
-  <div class="grid-item centered-xy" data-tooltip={validTooltip}>
+  <div class="grid-item centered-xy tilt-in-fwd-tr" data-tooltip={validTooltip}>
     {item.name}
   </div>
 </a>
