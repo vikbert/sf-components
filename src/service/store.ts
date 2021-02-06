@@ -5,14 +5,14 @@ export const filterTag = writable('');
 export const components = writable([
   {
     name: 'Asset',
-    tag: 'core',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Manages URL generation and versioning of web assets such as CSS stylesheets, JavaScript files and image files.',
   },
   {
     name: 'BrowserKit',
-    tag: 'framework',
+    tag: 'utility',
     versions: ['5.2'],
     desc: 'Simulates the behavior of a web browser.',
   },
@@ -25,21 +25,21 @@ export const components = writable([
   },
   {
     name: 'Config',
-    tag: 'application',
+    tag: 'framework',
     versions: ['5.2'],
     desc:
       'Helps you find, load, combine, autofill and validate configuration values.',
   },
   {
     name: 'Console',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Eases the creation of beautiful and testable command line interfaces.',
   },
   {
     name: 'Contracts',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc: 'A set of abstractions extracted out of the Symfony components.',
   },
@@ -51,7 +51,7 @@ export const components = writable([
   },
   {
     name: 'DependencyInjection',
-    tag: 'utility',
+    tag: 'framework',
     versions: ['5.2'],
     desc:
       'Allows you to standardize and centralize the way objects are constructed in your application.',
@@ -71,7 +71,7 @@ export const components = writable([
   },
   {
     name: 'ErrorHandler',
-    tag: 'core',
+    tag: 'framework',
     desc: 'Provides tools to manage errors and ease debugging PHP code.',
   },
   {
@@ -89,7 +89,7 @@ export const components = writable([
   },
   {
     name: 'Filesystem',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc: 'Provides basic utilities for the filesystem.',
   },
@@ -101,7 +101,7 @@ export const components = writable([
   },
   {
     name: 'Form',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc: 'Provides tools to easy creating, processing and reusing HTML forms.',
   },
@@ -114,27 +114,34 @@ export const components = writable([
   },
   {
     name: 'HttpClient',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'A low-level HTTP client with support for both PHP stream wrappers and cURL. It also provides utilities to consume APIs.',
   },
   {
     name: 'HttpFoundation',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc: 'Defines an object-oriented layer for the HTTP specification.',
   },
   {
     name: 'HttpKernel',
-    tag: 'utility',
+    tag: 'framework',
     versions: ['5.2'],
     desc:
       'Provides the building blocks to create flexible and fast HTTP-based frameworks.',
   },
   {
-    name: 'Intl',
+    name: 'Inflector',
     tag: 'utility',
+    versions: ['5.2'],
+    desc:
+      'unknow',
+  },
+  {
+    name: 'Intl',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Provides fallback code to handle cases when the intl extension is missing.',
@@ -154,14 +161,14 @@ export const components = writable([
   },
   {
     name: 'Mailer',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Helps sending emails and provides integration with the most popular mailing services.',
   },
   {
     name: 'Messenger',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Helps applications send and receive messages to/from other applications or via message queues.',
@@ -175,7 +182,7 @@ export const components = writable([
   },
   {
     name: 'Notifier',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Sends notifications via one or more channels (email, SMS, Slack, Telegram, ...)',
@@ -200,7 +207,7 @@ export const components = writable([
   },
   {
     name: 'PropertyAccess',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Provides function to read and write from/to an object or array using a simple string notation.',
@@ -213,14 +220,20 @@ export const components = writable([
       'Extracts information about the properties of PHP classes using metadata of popular sources (Doctrine, PHP Reflection, PHPdoc, etc.)',
   },
   {
+    name: 'RateLimiter',
+    tag: 'framework',
+    versions: ['5.2'],
+    desc: 'unknown',
+  },
+  {
     name: 'Routing',
-    tag: 'utility',
+    tag: 'framework',
     versions: ['5.2'],
     desc: 'Maps an HTTP request to a set of configuration variables.',
   },
   {
     name: 'Security',
-    tag: 'utility',
+    tag: 'framework',
     versions: ['5.2'],
     desc: 'Provides an infrastructure for sophisticated authorization systems.',
   },
@@ -233,7 +246,7 @@ export const components = writable([
   },
   {
     name: 'Serializer',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Turns objects into a specific format (XML, JSON, Yaml, ...) and the other way around.',
@@ -246,7 +259,7 @@ export const components = writable([
   },
   {
     name: 'String',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way. It also provides a slugger and an inflector.',
@@ -259,39 +272,39 @@ export const components = writable([
   },
   {
     name: 'Translation',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc: 'Provides tools to internationalize your application.',
   },
   {
     name: 'Uid',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Provides tools to work with unique identifiers such as UUIDs and ULIDs.',
   },
   {
     name: 'Validator',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc: 'Provides tools to validate classes.',
   },
   {
     name: 'VarDumper',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc: 'Provides mechanisms for walking through any arbitrary PHP variable.',
   },
   {
     name: 'VarExporter',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Exports any serializable PHP data structure to plain PHP code and allows to instantiate and populate objects without calling their constructors.',
   },
   {
     name: 'WebLink',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Implements HTML5 Links, Preload and Resource Hints specifications to advise clients (browsers) to preload and prefetch documents through HTTP and HTTP/2 pushes.',
@@ -305,7 +318,7 @@ export const components = writable([
   },
   {
     name: 'Workflow',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc: 'Provides tools for managing a workflow or finite state machine.',
   },
