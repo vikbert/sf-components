@@ -34,10 +34,10 @@
   }
   @media screen and (min-width: 640px) {
   h1 {
-     font-size: 63.8px;
+     font-size: 64px;
   }
   h3 {
-    font-size: 38.28px;
+    font-size: 38px;
   }
 }
 </style>
