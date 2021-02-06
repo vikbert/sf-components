@@ -10,7 +10,7 @@
   <div class="meta">
     <h1>inspired by</h1>
     <h3 class="opacity-75">
-      <a href="https://www.meetup.com/sfugberlin/events/276113252/">"QOSSMIC & Cartographing Symfony"</a>
+      <a href="https://www.meetup.com/sfugberlin/events/276113252/" target="_blank">"QOSSMIC & Cartographing Symfony"</a>
     </h3>
   </div>
 </div>

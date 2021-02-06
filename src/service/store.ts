@@ -126,13 +126,6 @@ export const components = writable([
       'Provides the building blocks to create flexible and fast HTTP-based frameworks.',
   },
   {
-    name: 'Inflector',
-    tag: 'utility',
-    versions: ['5.2'],
-    desc:
-      'unknow',
-  },
-  {
     name: 'Intl',
     tag: 'core',
     versions: ['5.2'],
@@ -143,7 +136,7 @@ export const components = writable([
     name: 'Ldap',
     tag: 'utility',
     versions: ['5.2'],
-    desc: "Provides an LDAP client for PHP on top of PHP\\'s ldap extension.",
+    desc: "Provides an LDAP client for PHP on top of PHP\'s ldap extension.",
   },
   {
     name: 'Lock',
@@ -216,7 +209,7 @@ export const components = writable([
     name: 'RateLimiter',
     tag: 'framework',
     versions: ['5.2'],
-    desc: 'unknown',
+    desc: 'A “rate limiter” controls how frequently some event (e.g. an HTTP request or a login attempt) is allowed to happen',
   },
   {
     name: 'Routing',

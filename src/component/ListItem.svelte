@@ -3,7 +3,7 @@
   export let tooltip: string = 'no description';
   export let item: any;
 
-  const limit = 80;
+  const limit = 200;
 
   let validTooltip: string = tooltip;
   let colorClass: string = '';
