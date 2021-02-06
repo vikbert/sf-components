@@ -1,17 +1,18 @@
 import { writable } from 'svelte/store';
 
 export const searchKey = writable('');
+export const filterTag = writable('');
 export const components = writable([
   {
     name: 'Asset',
-    tag: 'utility',
+    tag: 'core',
     versions: ['5.2'],
     desc:
       'Manages URL generation and versioning of web assets such as CSS stylesheets, JavaScript files and image files.',
   },
   {
     name: 'BrowserKit',
-    tag: 'utility',
+    tag: 'framework',
     versions: ['5.2'],
     desc: 'Simulates the behavior of a web browser.',
   },
@@ -24,7 +25,7 @@ export const components = writable([
   },
   {
     name: 'Config',
-    tag: 'utility',
+    tag: 'application',
     versions: ['5.2'],
     desc:
       'Helps you find, load, combine, autofill and validate configuration values.',
@@ -70,6 +71,7 @@ export const components = writable([
   },
   {
     name: 'ErrorHandler',
+    tag: 'core',
     desc: 'Provides tools to manage errors and ease debugging PHP code.',
   },
   {
@@ -105,6 +107,8 @@ export const components = writable([
   },
   {
     name: 'Guard',
+    tag: 'utility',
+    versions: ['5.2'],
     desc:
       'Brings many layers of authentication together, making it much easier to create complex authentication systems where you have total control.',
   },
@@ -185,6 +189,8 @@ export const components = writable([
   {
     name: 'PHPUnit Bridge',
     tag: 'utility',
+    versions: ['5.2'],
+    desc: 'PHPUnit Bridge.',
   },
   {
     name: 'Process',

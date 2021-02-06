@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { components, searchKey } from '../service/store';
+  import { components, searchKey, filterTag } from '../service/store';
   import Component from './Component.svelte';
   import ListFilter from './ListFilter.svelte';
   import ListHeader from './ListHeader.svelte';
@@ -7,6 +7,7 @@
   let items: any[] = [],
     filteredItems: any[] = [],
     count: number = 0,
+    tag: string = '',
     search: string = '';
 
   components.subscribe((value) => {
@@ -17,15 +18,21 @@
     search = value;
   });
 
+  filterTag.subscribe((value) => {
+    tag = value;
+  });
+
   $: {
     count = items.length;
+
+    if (!search || !tag) {
+      filteredItems = items;
+    }
 
     if (search && search.length !== 0) {
       filteredItems = items.filter((item) => {
         return item.name.toLowerCase().includes(search.toLowerCase());
       });
-    } else {
-      filteredItems = items;
     }
   }
 </script>
