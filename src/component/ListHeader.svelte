@@ -3,29 +3,41 @@
 </script>
 
 <div class="text-centered">
-  <div class="row title-container">
-    <div class="column">
+  <div class="title">
       <h1>Symfony 5.2</h1>
-      <h3>Full List of {count}x Components</h3>
-    </div>
+      <h3 class="opacity-75">Full List of {count}x Components</h3>
   </div>
-  <div class="column meta">
-    <h2>26x NEW components</h2>
-    <h3>*compared to 2.0</h3>
+  <div class="meta">
+    <h1>26x NEW components</h1>
+    <h3 class="opacity-75">*compared to 2.0</h3>
   </div>
 </div>
 
 <style>
-  .title-container {
-    padding: 10rem;
+  .title {
+    padding: 8rem 0;
     letter-spacing: -1px;
-  }
-  h1,
-  h2 {
-    margin-bottom: 1px;
-    font-weight: 900;
   }
   .meta {
     color: rgba(0, 128, 0, 0.63);
   }
+  h1,
+  h3 {
+    margin-bottom: 1px;
+    font-weight: 900;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+  h3 {
+    font-size: 6vw;
+  }
+  @media screen and (min-width: 640px) {
+  h1 {
+     font-size: 63.8px;
+  }
+  h3 {
+    font-size: 38.28px;
+  }
+}
 </style>

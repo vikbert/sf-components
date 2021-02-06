@@ -18,7 +18,6 @@
 <style>
   main {
     padding-top: 2rem;
-    height: 100vh;
   }
   .copyright {
     padding: 5rem 0;
