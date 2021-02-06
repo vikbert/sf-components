@@ -1,6 +1,6 @@
 <script lang="ts">
   import { searchKey } from '../service/store';
-  import Github from './GitHub.svelte';
+  import Repository from './Repository.svelte';
 
   let search: string = '';
   searchKey.subscribe((value) => {
@@ -15,7 +15,7 @@
 <nav class="topbar">
   <div class="container space-between">
     <div class="logo">
-      <a href="https://components.xzhou.vercel.app/">
+      <a href="https://sf-components.xzhou.vercel.app/">
         <span
           class="iconify"
           data-icon="mdi:symfony"
@@ -34,7 +34,7 @@
       />
       <span class="iconify" data-icon="fluent:search-28-filled" width="20" />
     </div>
-    <Github projectName="sf-components" />
+    <Repository projectName="sf-components" />
   </div>
 </nav>
 
