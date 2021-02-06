@@ -1,9 +1,15 @@
-<div class="row title-container hide-mobile">
-  <div class="column title">
-    <h1>Symfony 5.2</h1>
-    <h3>Full List of Components</h3>
+<script lang="ts">
+  export let count: number = 0;
+</script>
+
+<div class="text-centered">
+  <div class="row title-container">
+    <div class="column">
+      <h1>Symfony 5.2</h1>
+      <h3>Full List of {count}x Components</h3>
+    </div>
   </div>
-  <div class="column title text-right meta">
+  <div class="column meta">
     <h2>26x NEW components</h2>
     <h3>*compared to 2.0</h3>
   </div>
@@ -11,9 +17,7 @@
 
 <style>
   .title-container {
-    padding-bottom: 10px;
-  }
-  .title {
+    padding: 10rem;
     letter-spacing: -1px;
   }
   h1,

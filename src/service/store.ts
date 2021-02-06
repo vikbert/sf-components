@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 
+export const searchKey = writable('');
 export const components = writable([
   {
     name: 'Asset',
