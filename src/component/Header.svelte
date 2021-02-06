@@ -1,6 +1,6 @@
 <script lang="ts">
   import { searchKey } from '../service/store';
-  import Github from './Github.svelte';
+import Github from './GitHub.svelte';
 
   let search: string = '';
   searchKey.subscribe((value) => {
