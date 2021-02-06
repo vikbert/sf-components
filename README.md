@@ -14,6 +14,7 @@
 
 ---
 
+![](docs/components.png)
 
 ### Getting started
 ```bash

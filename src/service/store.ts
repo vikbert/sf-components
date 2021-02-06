@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 export const searchKey = writable('');
-export const filterTag = writable('');
+export const filterTag = writable('application');
 export const components = writable([
   {
     name: 'Asset',
@@ -104,13 +104,6 @@ export const components = writable([
     tag: 'application',
     versions: ['5.2'],
     desc: 'Provides tools to easy creating, processing and reusing HTML forms.',
-  },
-  {
-    name: 'Guard',
-    tag: 'utility',
-    versions: ['5.2'],
-    desc:
-      'Brings many layers of authentication together, making it much easier to create complex authentication systems where you have total control.',
   },
   {
     name: 'HttpClient',

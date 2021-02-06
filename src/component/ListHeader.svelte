@@ -8,8 +8,10 @@
       <h3 class="opacity-75">Full List of {count}x Components</h3>
   </div>
   <div class="meta">
-    <h1>26x NEW components</h1>
-    <h3 class="opacity-75">*compared to 2.0</h3>
+    <h1>inspired by Symfony Meetup</h1>
+    <h3 class="opacity-75">
+      <a href="https://www.meetup.com/sfugberlin/events/276113252/">"QOSSMIC & Cartographing Symfony"</a>
+    </h3>
   </div>
 </div>
 

@@ -50,15 +50,19 @@
     .grid-item {
       flex: 1 0 20%;
       padding: 2rem 0;
-      margin: 0.8rem;
+      margin: 0.5rem;
       min-width: 150px;
       outline: 1px solid #8f8b8b;
       color: black;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 500;#
+    }
+    div.grid-item.is-primary,
+    div.grid-item.is-info {
+      color: white;
     }
     .grid-item:hover {
-      background-color: #7b2083;
+      background-color: black;
       color: white;
     }
     /**

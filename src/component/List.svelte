@@ -40,7 +40,7 @@
 <div class="container">
   <ListFilter />
 </div>
-<div class="container">
+<div class="container text-centered">
   <div class="grid-row">
     {#each filteredItems as item}
       <ListItem tooltip={item.desc} {item} />
@@ -58,6 +58,8 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      max-width: 99rem;
+      margin: 0 auto;
     }
   </style>
 </svelte:head>
