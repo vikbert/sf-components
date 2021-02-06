@@ -15,7 +15,7 @@
 <nav class="topbar">
   <div class="container space-between">
     <div class="logo">
-      <a href="https://sf-components.xzhou.vercel.app/">
+      <a href="https://sf-components.vercel.app/">
         <span
           class="iconify"
           data-icon="mdi:symfony"

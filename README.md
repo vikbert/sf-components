@@ -14,7 +14,7 @@
 
 ---
 
-## Live [Demo](https://sf-components.xzhou.vercel.app/)
+## Live [Demo](https://sf-components.vercel.app/)
 
 
 ![](docs/components.png)
