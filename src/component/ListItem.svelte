@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { filterTag } from '../service/store';
+  import { filter as filterState } from '../service/store';
+  import type Filter from '../type/Filter';
   export let tooltip: string = 'no description';
   export let item: any;
 
@@ -9,8 +10,8 @@
   let colorClass: string = '';
   let tagFromStore: string = '';
 
-  filterTag.subscribe((value) => {
-    tagFromStore = value;
+  filterState.subscribe((value: Filter) => {
+    tagFromStore = value.tag;
   });
 
   $: {
@@ -39,8 +40,9 @@
 
 <a href={'https://symfony.com/components/' + item.name} target="_blank">
   <div
-  class={"grid-item centered-xy tilt-in-fwd-tr " + colorClass}
-  data-tooltip={validTooltip}>
+    class={'grid-item centered-xy tilt-in-fwd-tr ' + colorClass}
+    data-tooltip={validTooltip}
+  >
     {item.name}
   </div>
 </a>

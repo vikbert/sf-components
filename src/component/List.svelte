@@ -1,69 +1,56 @@
 <script lang="ts">
-  import ListItem from './ListItem.svelte';
-  import { components, searchKey, filterTag } from '../service/store';
-  import ListFilter from './ListFilter.svelte';
-  import ListHeader from './ListHeader.svelte';
+    import ListItem from './ListItem.svelte';
+    import { components,  filter as filterState} from '../service/store';
+    import ListFilter from './ListFilter.svelte';
+    import ListHeader from './ListHeader.svelte';
+    import type Component from '../type/Component';
+    import type Filter from '../type/Filter';
 
-  let items: any[] = [],
-    filteredItems: any[],
-    count: number,
-    tag: string,
-    search: string;
+    let items: Component[] = [],
+        filter: Filter;
 
-  components.subscribe((value) => {
-    items = value;
-  });
+    components.subscribe((value: Component[]) => {
+        items = value;
+    });
 
-  searchKey.subscribe((value) => {
-    search = value;
-  });
+    filterState.subscribe((value) => {
+        filter = value;
+    });
 
-  filterTag.subscribe((value) => {
-    tag = value;
-  });
+    $: {
+        if (!filter.search || !filter.tag) {
+            components.recovery();
+        }
 
-  $: {
-    count = items.length;
-
-    if (!search || !tag) {
-      filteredItems = items;
+        if (filter.search && filter.search.length !== 0) {
+            components.search(filter.search);
+        }
     }
-
-    if (search && search.length !== 0) {
-      const searchLowerCase = search.toLowerCase();
-      filteredItems = items.filter((item) => {
-        return (
-          item.name.toLowerCase().includes(searchLowerCase) ||
-          item.desc.toLowerCase().includes(searchLowerCase)
-        );
-      });
-    }
-  }
 </script>
 
 <div class="container">
-  <ListFilter />
+    <ListFilter />
 </div>
 <div class="container text-centered">
-  <div class="grid-row">
-    {#each filteredItems as item}
-      <ListItem tooltip={item.desc} {item} />
-    {/each}
-  </div>
+    <div class="grid-row">
+        {#each items as item}
+            <ListItem tooltip={item.desc} {item} />
+        {/each}
+    </div>
 </div>
 
 <div class="container">
-  <ListHeader {count} />
+    <ListHeader count={items.length} />
 </div>
 
 <svelte:head>
-  <style>
-    .grid-row {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      max-width: 99rem;
-      margin: 0 auto;
-    }
-  </style>
+    <style>
+        .grid-row {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            max-width: 99rem;
+            margin: 0 auto;
+        }
+    </style>
 </svelte:head>
