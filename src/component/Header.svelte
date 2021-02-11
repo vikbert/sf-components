@@ -31,7 +31,7 @@
         <div class="input-wrapper">
             <input
                 type="text"
-                placeholder="search by name and description"
+                placeholder="search symfony components"
                 bind:value={search}
                 on:keyup={submitSearch}
             />

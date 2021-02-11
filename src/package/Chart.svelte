@@ -16,7 +16,7 @@
             chart: {
                 bgColor: '#f7fafc',
                 caption: 'The Download-Ranking of the Symfony Packages',
-                subCaption: 'total downloads in 2020 for the ' + count + ' packages',
+                subCaption: 'total downloads in 2020 for the ' + count + ' packages and the packages with 0x downloads are not listed in this chart.',
                 xAxisName: 'Packages',
                 yAxisName: 'Downloads',
                 numberSuffix: ' times',
