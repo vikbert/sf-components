@@ -2,9 +2,10 @@
     import Header from './component/Header.svelte';
     import Components from './component/List.svelte';
     import Navigation from './navigation/Navigation.svelte';
-    import Package from './package/PackageChart.svelte';
+    import PackageChart from './package/PackageChart.svelte';
     import { currentTab } from './service/store';
     import Footer from './footer/Footer.svelte';
+    import { QueryClientProvider } from '@sveltestack/svelte-query';
 
     let tab: string;
     currentTab.subscribe((value) => {
@@ -22,7 +23,9 @@
     {#if 'components' === tab}
         <Components />
     {:else}
-        <Package />
+        <QueryClientProvider>
+            <PackageChart />
+        </QueryClientProvider>
     {/if}
 </main>
 
