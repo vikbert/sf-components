@@ -1,11 +1,10 @@
 <script lang="ts">
-    import FooterShape from './footer/FooterShape.svelte';
     import Header from './component/Header.svelte';
     import Components from './component/List.svelte';
     import Navigation from './navigation/Navigation.svelte';
     import Package from './package/PackageChart.svelte';
     import { currentTab } from './service/store';
-import Footer from './footer/Footer.svelte';
+    import Footer from './footer/Footer.svelte';
 
     let tab: string;
     currentTab.subscribe((value) => {
@@ -27,4 +26,4 @@ import Footer from './footer/Footer.svelte';
     {/if}
 </main>
 
-<Footer/>
+<Footer />
