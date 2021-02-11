@@ -1,19 +1,30 @@
 <script lang="ts">
-  import FooterShape from './component/FooterShape.svelte';
-  import Header from './component/Header.svelte';
-  import Components from './component/List.svelte';
-  import Packages from './package/index.svelte'
+    import FooterShape from './footer/FooterShape.svelte';
+    import Header from './component/Header.svelte';
+    import Components from './component/List.svelte';
+    import Navigation from './navigation/Navigation.svelte';
+    import Package from './package/PackageChart.svelte';
+    import { currentTab } from './service/store';
+import Footer from './footer/Footer.svelte';
+
+    let tab: string;
+    currentTab.subscribe((value) => {
+        tab = value;
+    });
 </script>
 
 <header class="header">
-  <Header />
+    <Header />
 </header>
 
 <main class="main">
-  <Packages />
-  <Components />
+    <Navigation />
+
+    {#if 'components' === tab}
+        <Components />
+    {:else}
+        <Package />
+    {/if}
 </main>
 
-<FooterShape>
-  <div class="centered-xy">vikbert ® 2021</div>
-</FooterShape>
+<Footer/>

@@ -3,20 +3,20 @@
     import Charts from 'fusioncharts/fusioncharts.charts';
     import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
     import SvelteFC, {fcRoot} from 'svelte-fusioncharts';
-    import dataSource from './packages.ts';
+    import dataSource from './chartData.ts';
 
     fcRoot(FusionCharts, Charts, FusionTheme);
 
     const chartConfigs = {
-        type: 'bar2d',
-        width: '1900',
-        height: '1400',
+        type: 'bar3d',
+        width: '1119',
+        height: '2400',
         dataFormat: 'json',
-        minPlotHeightForValue: '15',
+        minPlotHeightForValue: '50',
         dataSource,
     };
 </script>
 
-<div id="container">
+<div class="container">
     <SvelteFC {...chartConfigs}/>
 </div>

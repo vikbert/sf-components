@@ -1,7 +1,8 @@
 export default {
     'chart': {
-        'caption': 'Symfony Packages',
-        'subCaption': ' Download Ranking 2020',
+        "bgColor": "#f7fafc",
+        'caption': 'The Download-Ranking of the Symfony Packages',
+        'subCaption': 'the ranking in 2020',
         'xAxisName': 'Packages',
         'yAxisName': 'Downloads',
         'numberSuffix': ' times',
