@@ -8,10 +8,11 @@
     fcRoot(FusionCharts, Charts, FusionTheme);
 
     const chartConfigs = {
-        type: 'column2d',
-        width: '600',
-        height: '400',
+        type: 'bar2d',
+        width: '1900',
+        height: '1400',
         dataFormat: 'json',
+        minPlotHeightForValue: '15',
         dataSource,
     };
 </script>
