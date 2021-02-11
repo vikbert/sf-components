@@ -1,8 +1,9 @@
 <script lang="ts">
   import { filter as filterState } from '../service/store';
+  import Component from "../type/Component";
   import type Filter from '../type/Filter';
   export let tooltip: string = 'no description';
-  export let item: any;
+  export let item: Component;
 
   const limit = 200;
 
@@ -57,7 +58,7 @@
       outline: 1px solid #8f8b8b;
       color: black;
       font-size: 14px;
-      font-weight: 500;#
+      font-weight: 500;
     }
     div.grid-item.is-primary,
     div.grid-item.is-info {
