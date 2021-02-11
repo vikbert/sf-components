@@ -1,9 +1,8 @@
 <script lang="ts">
   import { filter as filterState } from '../service/store';
-  import Component from "../type/Component";
   import type Filter from '../type/Filter';
   export let tooltip: string = 'no description';
-  export let item: Component;
+  export let item: any;
 
   const limit = 200;
 

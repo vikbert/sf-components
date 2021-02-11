@@ -2,6 +2,7 @@
   import FooterShape from './component/FooterShape.svelte';
   import Header from './component/Header.svelte';
   import Components from './component/List.svelte';
+  import Packages from './package/index.svelte'
 </script>
 
 <header class="header">
@@ -9,6 +10,7 @@
 </header>
 
 <main class="main">
+  <Packages />
   <Components />
 </main>
 
