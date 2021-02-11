@@ -26,6 +26,6 @@
 
 <style>
   .navigation {
-    width: 22rem;
+    width: 25rem;
   }
 </style>
