@@ -1,5 +1,5 @@
 {
-  "packages": [
+  "data": [
     {
         "label": "event-dispatcher",
         "value": "263278356"
