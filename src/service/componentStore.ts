@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import data from './data';
+import data from './componentData';
 import type Component from '../type/Component';
 
 const createStore = (data: Component[]) => {
