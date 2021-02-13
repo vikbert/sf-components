@@ -22,32 +22,31 @@
 
     $: {
         if (countdown === 0) {
-           clearTimer();
+            clearTimer();
         }
     }
 </script>
 
-<div>
-    {#if countdown}
-        <div class="countdown"><span>{countdown}</span></div>
-    {:else}
-        Animation is now repeated.
-    {/if}
-</div>
+{#if countdown}
+    <div class="countdown">
+        <span>{countdown}</span>
+    </div>
+{:else}
+   <span> Animation is now repeated.</span>
+{/if}
 
 <style>
     .countdown {
-        width: 4rem;
-        height: 4rem;
-        padding: 4px;
-        margin: 4px;
+        width: 6rem;
+        height: 6rem;
+        padding: 6px;
+        margin: 6px;
         border-radius: 50%;
         text-align: center;
         border: 1px solid green;
     }
     span {
-        font-size: 2rem;
-        font-weight: bolder;
+        font-size: 3rem;
         color: green;
     }
 </style>

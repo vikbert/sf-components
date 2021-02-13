@@ -17,9 +17,9 @@
     <Show {item} {openPopup} closeCallback={handleClosePopup} />
 {/if}
 
-<div class="card shadow-lg">
+<div class="card shadow-lg" data-tooltip={item.description}>
     <div class="title">
-        <h4 class="opacity-75">{item.name}</h4>
+        <h5 class="opacity-75">{item.name}</h5>
     </div>
     <div class="content text-centered">
         <a href="#/" alt="open for play">
