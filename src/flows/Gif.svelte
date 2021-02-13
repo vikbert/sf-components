@@ -15,5 +15,5 @@
 {:then data}
     <img src={data.message} alt={item.name} />
 {:catch error}
-    <p>loading image failed</p>
+    <p>loading image failed: {error}</p>
 {/await}
