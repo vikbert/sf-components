@@ -8,7 +8,7 @@
             description:
                 'During the handling of an HTTP request, the Symfony framework (or any application using the HttpKernel component) dispatches some events which you can use to modify how the request is handled, these events e.g. kernel.request, kernel.controller, kernel.response ...',
             file: 'symfony_event_cycle',
-            duration: 21,
+            duration: 17,
         },
         {
             name: 'Symfony Messenger',
@@ -18,25 +18,11 @@
             duration: 15,
         },
         {
-            name: 'Symfony Event Cycle',
+            name: 'Oauth2 Authorization Code',
             description:
-                'Simulate the flow of symfony build-in kern events from request to response',
-            file: 'symfony_event_cycle',
-            duration: 21,
-        },
-        {
-            name: 'Symfony Event Cycle',
-            description:
-                'Simulate the flow of symfony build-in kern events from request to response',
-            file: 'symfony_event_cycle',
-            duration: 21,
-        },
-        {
-            name: 'Symfony Event Cycle',
-            description:
-                'Simulate the flow of symfony build-in kern events from request to response',
-            file: 'symfony_event_cycle',
-            duration: 21,
+                'A client application makes an authorization request to an authorization endpoint, and it receives a short-lived authorization code, then it makes a token request to a token endpoint with the authorization code, and it gets an access token.',
+            file: 'oauth2_authorization_code_flow',
+            duration: 54,
         },
     ];
 </script>
