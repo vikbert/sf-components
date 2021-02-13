@@ -21,8 +21,6 @@
     });
 
     $: {
-        console.log('###');
-
         if (countdown === 0) {
            clearTimer();
         }

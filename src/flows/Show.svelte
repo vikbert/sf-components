@@ -16,7 +16,10 @@
         </div>
         <div class="actions space-between">
             <Countdown countdown={item.duration} on:completed={() => done} />
-            <button class="is-secondary is-outlined is-rounded" on:click={closeCallback}>
+            <button
+                class="is-secondary is-outlined is-rounded"
+                on:click={closeCallback}
+            >
                 close
             </button>
         </div>
@@ -26,6 +29,8 @@
 <style>
     .content {
         padding: 0 1rem;
+        min-width: 76rem;
+        min-height: 40rem;
     }
     .actions {
         padding: 0 2rem;

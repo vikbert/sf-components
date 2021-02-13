@@ -6,14 +6,14 @@
     const fetchImage = (async () => {
         const response = await fetch(imageUrl);
 
-        return await response.json();
+        return await response;
     })();
 </script>
 
 {#await fetchImage}
-    <p>loading the image ...</p>
+    <div>loading the image ...</div>
 {:then data}
-    <img src={data.message} alt={item.name} />
+    <img src={data.url} alt={item.name} />
 {:catch error}
-    <p>loading image failed: {error}</p>
+    <div>loading image failed: {error}</div>
 {/await}
