@@ -9,5 +9,5 @@ export const filter = writable({
     tag: DEFAULT_TAG_NAME,
 });
 
-export const currentTab = writable(DEFAULT_TAB_NAME);
+export const currentTab = writable('flows');
 export const components = componentStore;
