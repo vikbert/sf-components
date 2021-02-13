@@ -16,6 +16,6 @@
     {:then data}
         <PackageChart data={data.data} />
     {:catch error}
-        <p>An error occurred</p>
+        <p>An error occurred: {error}</p>
     {/await}
 </div>
