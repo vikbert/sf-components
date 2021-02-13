@@ -1,10 +1,13 @@
 <script lang="ts">
-    export let projectName: string = '';
     export let width: number = 30;
+    export let githubAuthor: string='';
+    export let githubProjectName: string = '';
+
+    let info: [string, string] = [githubAuthor, githubProjectName];
 </script>
 
 <div class="github">
-    <a href={'https://github.com/vikbert/' + projectName}>
+    <a href={'https://github.com/' + info.join('/')}>
     <span
         class="iconify"
         data-icon="ant-design:github-outlined"

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { filter as filterState } from '../service/store';
     import type Filter from '../type/Filter';
-    import Repository from './Repository.svelte';
+    import {Github} from '@pixss/svelte';
 
     let search: string = '';
     filterState.subscribe((value: Filter) => {
@@ -41,7 +41,7 @@
                 width="20"
             />
         </div>
-        <Repository projectName="sf-components" />
+        <Github githubAuthor='vikbert' githubProject='pixss'/>
     </div>
 </nav>
 

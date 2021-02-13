@@ -6,5 +6,5 @@ export const filter = writable({
     tag: 'application',
 });
 
-export const currentTab = writable('components');
+export const currentTab = writable('flows');
 export const components = componentStore;
