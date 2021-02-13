@@ -6,6 +6,7 @@
     import SymfonyFlows from './flows/List.svelte';
     import SymfonyPackages from './package/ChartContainer.svelte';
     import { currentTab } from './service/store';
+    import AwesomeLinks from './awesome/AwesomeLinks.svelte';
 
     let tab: string;
     currentTab.subscribe((value) => {
@@ -23,6 +24,8 @@
         <SymfonyFlows />
     {:else if 'packages' === tab}
         <SymfonyPackages />
+    {:else if 'awesome' === tab}
+        <AwesomeLinks />
     {:else}
         <SymfonyComponents />
     {/if}

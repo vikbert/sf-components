@@ -58,3 +58,10 @@
   visibility: hidden;
   opacity: 0;
 }
+
+.awesome h1 {
+    text-align: center;
+}
+.awesome >ul > li {
+    margin: 0;
+}

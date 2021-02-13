@@ -8,6 +8,7 @@
         { tabName: 'components', tabTitle: 'Components' },
         { tabName: 'packages', tabTitle: 'Packages' },
         { tabName: 'flows', tabTitle: 'Flows' },
+        { tabName: 'awesome', tabTitle: 'Awesome' },
     ];
 
     let tab: string;
@@ -35,6 +36,6 @@
 
 <style>
     .navigation {
-        width: 35rem;
+        width: 45rem;
     }
 </style>

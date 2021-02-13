@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "@pixss/svelte": "^1.2.2",
-    "sirv-cli": "^1.0.11"
+    "sirv-cli": "^1.0.11",
+    "svelte-markdown": "0.0.4"
   },
   "jest": {
     "transform": {
