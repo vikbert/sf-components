@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { filter as filterState } from '../service/store';
+    import { filter as filterState, currentTab } from '../service/store';
     import type Filter from '../type/Filter';
     import {Github} from '@pixss/svelte';
 
@@ -13,6 +13,10 @@
             return {...value, search};
         });
     };
+
+    const switchToComponentTab = () => {
+        currentTab.set('components');
+    }
 </script>
 
 <nav class="topbar">
@@ -34,6 +38,7 @@
                 placeholder="search symfony components"
                 bind:value={search}
                 on:keyup={submitSearch}
+                on:focus={switchToComponentTab}
             />
             <span
                 class="iconify"
