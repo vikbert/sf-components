@@ -4,9 +4,7 @@
     export let item: Flow;
     const imageUrl = 'flows/' + item.file + '.gif';
     const fetchImage = (async () => {
-        const response = await fetch(imageUrl);
-
-        return await response;
+        return await fetch(imageUrl);
     })();
 </script>
 

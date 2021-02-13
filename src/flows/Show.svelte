@@ -1,21 +1,19 @@
 <script lang="ts">
     import Countdown from './CountDown.svelte';
     import type { Flow } from '../type/Flow';
+
     export let item: Flow;
     export let openPopup: boolean;
-    export let closeCallback: any = () => {};
-
-    let done: boolean = false;
-    let open = openPopup;
+    export let closeCallback: () => void;
 </script>
 
-<div class="overlay" class:open>
+<div class="overlay" class:open={openPopup}>
     <div class="card">
         <div class="content">
             <img src={'flows/' + item.file + '.gif'} alt={item.name} />
         </div>
         <div class="actions space-between">
-            <Countdown countdown={item.duration} on:completed={() => done} />
+            <Countdown countdown={item.duration} />
             <button
                 class="is-secondary is-outlined is-rounded"
                 on:click={closeCallback}
