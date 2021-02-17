@@ -23,16 +23,14 @@
     };
 </script>
 
-<div class="container centered-xy py-2 navigation">
-    <div class="navigation">
+<div class="container centered-xy navigation">
         <ul>
             {#each items as item}
-                <a href="#/" on:click={() => setTabName(item.tabName)} class:is-active={tab === item.tabName}>
+                <a href="#/" on:click={() => setTabName(item.tabName)} class:is-active={tab === item.tabName} title={item.tabTitle}>
                     <span class="iconify" data-icon={item.icon} data-inline="false"></span>
                 </a>
             {/each}
         </ul>
-    </div>
 </div>
 
 <style>
