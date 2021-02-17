@@ -24,6 +24,13 @@
             file: 'oauth2_authorization_code_flow',
             duration: 54,
         },
+        {
+            name: 'Git Flow',
+            description:
+                'A demostration of Git Flow',
+            file: 'git_flow_34',
+            duration: 34,
+        },
     ];
 </script>
 

@@ -1,14 +1,15 @@
 <script lang="ts">
-    import { currentTab } from '../service/store';
+    import {currentTab} from '../service/store';
+
     type NavItem = {
         tabName: string,
         tabTitle: string,
     };
     const items: NavItem[] = [
-        { tabName: 'components', tabTitle: 'Components' },
-        { tabName: 'packages', tabTitle: 'Packages' },
-        { tabName: 'flows', tabTitle: 'Flows' },
-        { tabName: 'awesome', tabTitle: 'Awesome' },
+        {tabName: 'components', tabTitle: 'Components', icon: 'gg:components'},
+        {tabName: 'packages', tabTitle: 'Packages', icon: 'ph:package'},
+        {tabName: 'flows', tabTitle: 'Flows', icon: 'carbon:graphical-data-flow'},
+        {tabName: 'awesome', tabTitle: 'Awesome', icon: 'ic:outline-auto-awesome'},
     ];
 
     let tab: string;
@@ -22,20 +23,29 @@
     };
 </script>
 
-<div class="container centered-xy py-2">
-    <div class="navigation tabs">
+<div class="container centered-xy py-2 navigation">
+    <div class="navigation">
         <ul>
             {#each items as item}
-                <li on:click={() => setTabName(item.tabName)} class:is-active={tab === item.tabName}>
-                    <a href="#/">{item.tabTitle}</a>
-                </li>
+                <a href="#/" on:click={() => setTabName(item.tabName)} class:is-active={tab === item.tabName}>
+                    <span class="iconify" data-icon={item.icon} data-inline="false"></span>
+                </a>
             {/each}
         </ul>
     </div>
 </div>
 
 <style>
-    .navigation {
-        width: 45rem;
-    }
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    font-size: 5rem;
+    padding: .5rem;
+    color: #dedede;
+  }
+  a.is-active {
+    color: #7b2083;
+  }
 </style>

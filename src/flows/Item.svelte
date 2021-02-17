@@ -24,7 +24,7 @@
     <div class="content text-centered">
         <a href="#/" alt="open for play">
             <img
-                src={'flows/' + item.file + '.jpg'}
+                src={'flows/' + item.file + '.png'}
                 alt={item.name}
                 on:click={handleOpenPopup}
             />
