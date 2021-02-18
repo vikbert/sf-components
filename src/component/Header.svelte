@@ -46,7 +46,7 @@
                 width="20"
             />
         </div>
-        <Github githubAuthor='vikbert' githubProject='pixss'/>
+        <Github githubAuthor='vikbert' githubProject='sf-components'/>
     </div>
 </nav>
 
