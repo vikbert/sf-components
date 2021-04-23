@@ -18,8 +18,3 @@
         laoding markdown failed : {error}
     {/await}
 </div>
-<style>
-    h1 {
-        text-align: center;
-    }
-</style>

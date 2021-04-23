@@ -28,10 +28,8 @@
     }
 </script>
 
-<div class="container">
-    <ListFilter />
-</div>
 <div class="container text-centered">
+    <ListFilter />
     <div class="grid-row">
         {#each items as item}
             <ListItem tooltip={item.desc} {item} />
