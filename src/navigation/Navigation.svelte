@@ -8,7 +8,7 @@
     const items: NavItem[] = [
         {tabName: 'components', tabTitle: 'Components', icon: 'gg:components'},
         {tabName: 'packages', tabTitle: 'Packages', icon: 'ph:package'},
-        {tabName: 'flows', tabTitle: 'Flows', icon: 'carbon:graphical-data-flow'},
+        // {tabName: 'flows', tabTitle: 'Flows', icon: 'carbon:graphical-data-flow'},
         {tabName: 'awesome', tabTitle: 'Awesome', icon: 'ic:outline-auto-awesome'},
     ];
 
